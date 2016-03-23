@@ -16,3 +16,7 @@ category.form.description: "Description"
 category.form.color: "Color"
 category.form.save: "Save"
 category.empty_list: "No categories in database"
+
+tag.form.title: "Title"
+tag.form.save: "Save"
+tag.empty_list: "No tags in database"

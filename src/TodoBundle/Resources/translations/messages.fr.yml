@@ -15,3 +15,8 @@ category.form.name: "Nom"
 category.form.description: "Description"
 category.form.color: "Couleur"
 category.form.save: "Enregistrer"
+category.empty_list: "aucune catégorie en base"
+
+tag.form.title: "Titre"
+tag.form.save: "Enregistrer"
+tag.empty_list: "aucun tag en base"
