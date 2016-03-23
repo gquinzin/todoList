@@ -9,10 +9,12 @@
 namespace TodoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="task")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Task
 {
@@ -72,6 +74,22 @@ class Task
      * @ORM\ManyToOne(targetEntity="User", inversedBy="tasks")
      */
     protected $user;
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function timestamps(){
+        if(is_null($this->createdAt)){
+            $this->createdAt = new \DateTime();
+        }
+        $this->updatedAt = new \DateTime();
+    }
+
+    public function __construct(User $user)
+    {
+        $this->user = $user;
+    }
 
     /**
      * @return mixed

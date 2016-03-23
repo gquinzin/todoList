@@ -24,12 +24,6 @@ class TaskType extends AbstractType
             ->add('remindAt', null, array(
                 'label' => 'task.form.remindat',
             ))
-            ->add('createdAt', null, array(
-                'label' => 'task.form.createdat',
-            ))
-            ->add('updatedAt', null, array(
-                'label' => 'task.form.updatedat',
-            ))
             ->add('status', null, array(
                 'label' => 'task.form.status',
             ))

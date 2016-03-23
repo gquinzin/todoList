@@ -17,7 +17,7 @@ use TodoBundle\Form\Type\TagType;
 class TagController extends Controller
 {
     /**
-     * @Route("/tag/create")
+     * @Route("/tag/create", name="create_tag")
      */
     public function createAction(Request $request)
     {
@@ -46,7 +46,7 @@ class TagController extends Controller
     }
 
     /**
-     * @Route("/tag/list")
+     * @Route("/tag/list", name="list_tag")
      */
     public function listAction()
     {

@@ -12,13 +12,13 @@ use TodoBundle\Form\Type\TaskType;
 class TaskController extends Controller
 {
     /**
-     * @Route("/task/create")
+     * @Route("/task/create", name="create_task")
      */
     public function createAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $task = new task();
+        $task = new task($this->getUser());
         $form = $this->createForm(TaskType::class, $task);
 
         $form->handleRequest($request);
@@ -41,13 +41,15 @@ class TaskController extends Controller
     }
 
     /**
-     * @Route("/task/list")
+     * @Route("/task/list", name="list_task")
      */
     public function listAction()
     {
         $tasks = $this->getDoctrine()
             ->getRepository('TodoBundle:Task')
-            ->findAll();
+            ->findByUser(
+                $this->getUser()
+            );
 
         return $this->render('TodoBundle:Task:list.html.twig', array(
             'tasks' => $tasks,
