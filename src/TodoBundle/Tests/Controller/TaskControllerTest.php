@@ -87,7 +87,7 @@ class TaskControllerTest extends WebTestCase
         $this->getClient();
 
         $crawler = $this->client->request('GET','/task/list');
-        
+
     }
 
 }

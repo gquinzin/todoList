@@ -1,5 +1,6 @@
 hello_world: "Coucou tout le monde!"
 homepage.welcome_message: "Bienvenue sur mon appli todolist"
+
 task.form.label: "Libellé"
 task.form.description: "Description"
 task.form.duedate: "Date d'expiration"
@@ -9,3 +10,8 @@ task.form.updatedat: "Mis à jour le"
 task.form.status: "Statut"
 task.form.save: "Enregistrer"
 task.empty_list: "aucune tache en base"
+
+category.form.name: "Nom"
+category.form.description: "Description"
+category.form.color: "Couleur"
+category.form.save: "Enregistrer"

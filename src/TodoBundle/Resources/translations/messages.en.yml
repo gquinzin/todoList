@@ -1,5 +1,6 @@
 hello_world: "Hello World!"
 homepage.welcome_message: "Welcome to my todolist app"
+
 task.form.label: "Label"
 task.form.description: "Description"
 task.form.duedate: "Due date"
@@ -9,3 +10,9 @@ task.form.updatedat: "Updated at"
 task.form.status: "Status"
 task.form.save: "Save"
 task.empty_list: "No tasks in database"
+
+category.form.name: "Name"
+category.form.description: "Description"
+category.form.color: "Color"
+category.form.save: "Save"
+category.empty_list: "No categories in database"
