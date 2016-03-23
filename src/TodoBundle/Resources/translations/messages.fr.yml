@@ -8,6 +8,8 @@ task.form.remindat: "Rappeler le"
 task.form.createdat: "Créé le"
 task.form.updatedat: "Mis à jour le"
 task.form.status: "Statut"
+task.form.category: "Catégorie"
+task.form.tag: "Tag"
 task.form.save: "Enregistrer"
 task.empty_list: "aucune tache en base"
 

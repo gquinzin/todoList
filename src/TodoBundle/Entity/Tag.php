@@ -39,6 +39,12 @@ class Tag
      */
     protected $task;
 
+
+    public function __toString()
+    {
+        return $this->title;
+    }
+
     /**
      * @return mixed
      */

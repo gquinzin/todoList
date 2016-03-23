@@ -33,6 +33,12 @@ class TaskType extends AbstractType
             ->add('status', null, array(
                 'label' => 'task.form.status',
             ))
+            ->add('category', null, array(
+                'label' => 'task.form.category',
+            ))
+            ->add('tag', null, array(
+                'label' => 'task.form.tag',
+            ))
             ->add('save', SubmitType::class, array(
                 'label' => 'task.form.save',
             ))
