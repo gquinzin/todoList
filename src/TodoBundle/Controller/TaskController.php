@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\httpFoundation\Request;
 use Symfony\Component\VarDumper\VarDumper;
 use TodoBundle\Entity\Task;
+use TodoBundle\Entity\Category;
 use TodoBundle\Form\Type\TaskType;
 
 class TaskController extends Controller
@@ -49,6 +50,23 @@ class TaskController extends Controller
             ->getRepository('TodoBundle:Task')
             ->findByUser(
                 $this->getUser()
+            );
+
+        return $this->render('TodoBundle:Task:list.html.twig', array(
+            'tasks' => $tasks,
+        ));
+    }
+
+    /**
+     * @Route("/task/category/{id}", requirements={"id" = "\d+"}, name="list_task_category")
+     */
+    public function listByCategoryAction(Request $request)
+    {
+        $tasks = $this
+            ->getDoctrine()
+            ->getRepository('TodoBundle:Task')
+            ->findByCategory(
+                $request->get('id')
             );
 
         return $this->render('TodoBundle:Task:list.html.twig', array(
