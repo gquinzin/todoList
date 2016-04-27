@@ -75,6 +75,23 @@ class TaskController extends Controller
     }
 
     /**
+     * @Route("/task/tag/{id}", requirements={"id" = "\d+"}, name="list_task_tag")
+     */
+    public function listByTagAction(Request $request)
+    {
+        $tasks = $this
+            ->getDoctrine()
+            ->getRepository('TodoBundle:Task')
+            ->getTasksByTag(
+                $request->get('id'), $this->getUser()
+            );
+
+        return $this->render('TodoBundle:Task:list.html.twig', array(
+            'tasks' => $tasks,
+        ));
+    }
+
+    /**
      * @Route("/task/currentday/", name="list_task_currentday")
      */
     public function listByDayAction(Request $request)
@@ -82,7 +99,9 @@ class TaskController extends Controller
         $tasks = $this
             ->getDoctrine()
             ->getRepository('TodoBundle:Task')
-            ->getTasksOfTheDay();
+            ->getTasksOfTheDay(
+                $this->getUser()
+            );
 
         return $this->render('TodoBundle:Task:list.html.twig', array(
             'tasks' => $tasks,
@@ -97,7 +116,9 @@ class TaskController extends Controller
         $tasks = $this
             ->getDoctrine()
             ->getRepository('TodoBundle:Task')
-            ->getTasksOfTheWeek();
+            ->getTasksOfTheWeek(
+                $this->getUser()
+            );
 
         return $this->render('TodoBundle:Task:list.html.twig', array(
             'tasks' => $tasks,
@@ -112,7 +133,9 @@ class TaskController extends Controller
         $tasks = $this
             ->getDoctrine()
             ->getRepository('TodoBundle:Task')
-            ->getTasksOfTheMonth();
+            ->getTasksOfTheMonth(
+                $this->getUser()
+            );
 
         return $this->render('TodoBundle:Task:list.html.twig', array(
             'tasks' => $tasks,
