@@ -5,14 +5,51 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <style>
+            html {
+                position: relative;
+                min-height: 100%;
+            }
+            body {
+                /* Margin bottom by footer height */
+                margin-top: 70px;
+                margin-bottom: 60px;
+            }
+            .footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                /* Set the fixed height of the footer here */
+                height: 60px;
+                background-color: #f5f5f5;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
-        {% for flash_message in app.session.flashbag.get('notice') %}
-            <div class="flash-notice">
-                {{ flash_message }}
+
+        {%  include 'navigation.html.twig' %}
+        
+        <div class="container">
+            {% for flash_message in app.session.flashbag.get('notice') %}
+
+                <div class="alert alert-success" role="alert">
+                    <div class="flash-notice">
+                        {{ flash_message }}
+                    </div>
+                </div>
+            {% endfor %}
+            {% block body %}{% endblock %}
+            {% block javascripts %}{% endblock %}
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">Copyrights, 2016.</p>
             </div>
-        {% endfor %}
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </body>
 </html>

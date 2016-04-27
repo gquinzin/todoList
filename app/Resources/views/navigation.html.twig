@@ -1,0 +1,74 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Todo List</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">{% trans %}homepage.title{% endtrans %}</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        {% trans %}homepage.tasks.title{% endtrans %}
+                        <span class="caret"></span>
+                    </a>                            <ul class="dropdown-menu">
+                        <li>
+                            <a href={{ path('create_task') }}>{% trans %}homepage.tasks.create{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('list_task') }}>{% trans %}homepage.tasks.list{% endtrans %}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        {% trans %}homepage.categories.title{% endtrans %}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href={{ path('create_category') }}>{% trans %}homepage.categories.create{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('list_category') }}>{% trans %}homepage.categories.list{% endtrans %}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        {% trans %}homepage.tags.title{% endtrans %}
+                        <span class="caret"></span>
+                    </a>                            <ul class="dropdown-menu">
+                        <li>
+                            <a href={{ path('create_tag') }}>{% trans %}homepage.tags.create{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('list_tag') }}>{% trans %}homepage.tags.list{% endtrans %}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        {% trans %}homepage.filters.title{% endtrans %}
+                        <span class="caret"></span>
+                    </a>                            <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ path('list_task_currentday') }}">{% trans %}homepage.filters.daytasks{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('list_task_currentweek') }}">{% trans %}homepage.filters.weektasks{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('list_task_currentmonth') }}">{% trans %}homepage.filters.monthtasks{% endtrans %}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>

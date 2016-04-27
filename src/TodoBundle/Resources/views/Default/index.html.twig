@@ -3,43 +3,4 @@
 {% block body %}
 <p>{% trans %}hello_world{% endtrans %}</p>
 <p>{% trans %}homepage.welcome_message{% endtrans %}</p>
-    <h2>{% trans %}homepage.filters.title{% endtrans %}</h2>
-    <ul>
-        <li>
-            <a href="{{ path('list_task_currentday') }}">{% trans %}homepage.filters.daytasks{% endtrans %}</a>
-        </li>
-        <li>
-            <a href="{{ path('list_task_currentweek') }}">{% trans %}homepage.filters.weektasks{% endtrans %}</a>
-        </li>
-        <li>
-            <a href="{{ path('list_task_currentmonth') }}">{% trans %}homepage.filters.monthtasks{% endtrans %}</a>
-        </li>
-    </ul>
-    <h2>{% trans %}homepage.tasks.title{% endtrans %}</h2>
-    <ul>
-        <li>
-            <a href={{ path('create_task') }}>{% trans %}homepage.tasks.create{% endtrans %}</a>
-        </li>
-        <li>
-            <a href={{ path('list_task') }}>{% trans %}homepage.tasks.list{% endtrans %}</a>
-        </li>
-    </ul>
-    <h2>{% trans %}homepage.categories.title{% endtrans %}</h2>
-    <ul>
-        <li>
-            <a href={{ path('create_category') }}>{% trans %}homepage.categories.create{% endtrans %}</a>
-        </li>
-        <li>
-            <a href={{ path('list_category') }}>{% trans %}homepage.categories.list{% endtrans %}</a>
-        </li>
-    </ul>
-    <h2>{% trans %}homepage.tags.title{% endtrans %}</h2>
-    <ul>
-        <li>
-            <a href={{ path('create_tag') }}>{% trans %}homepage.tags.create{% endtrans %}</a>
-        </li>
-        <li>
-            <a href={{ path('list_tag') }}>{% trans %}homepage.tags.list{% endtrans %}</a>
-        </li>
-    </ul>
 {%  endblock %}

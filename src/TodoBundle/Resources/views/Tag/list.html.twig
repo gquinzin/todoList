@@ -2,11 +2,11 @@
 
 {% block body %}
     <h2>{% trans %} homepage.tags.title {% endtrans %}</h2>
-    <ul>
-    {%  for tag in tags %}
-        <li><a href="{{ path('list_task_tag', {id: tag.id}) }}"> {{ tag.title }} </a></li>
-    {% else  %}
-        <li> {% trans %} tag.empty_list {% endtrans %} </li>
-    {% endfor %}
-    </ul>
+    <table class="table table-striped table-hover">
+        {%  for tag in tags %}
+        <tr><td><a href="{{ path('list_task_tag', {id: tag.id}) }}"> {{ tag.title }} </a></tr></td>
+        {% else  %}
+        <tr><td> {% trans %} tag.empty_list {% endtrans %} </tr></td>
+        {% endfor %}
+    </table>
 {%  endblock %}

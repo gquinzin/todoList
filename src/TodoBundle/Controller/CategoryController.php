@@ -34,7 +34,7 @@ class CategoryController extends Controller
 
             $this->addFlash(
                 'notice',
-                'Task added with success'
+                'category added with success'
             );
 
             return $this->redirect("/");

@@ -1,6 +1,7 @@
 hello_world: "Hello World!"
-homepage.welcome_message: "Welcome to my todolist app"
 
+homepage.welcome_message: "Welcome to my todolist app"
+homepage.title: "Home"
 homepage.filters.title: "Filters"
 homepage.filters.daytasks: "Tasks of the day"
 homepage.filters.weektasks: "Tasks of the week"
