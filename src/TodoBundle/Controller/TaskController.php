@@ -73,4 +73,49 @@ class TaskController extends Controller
             'tasks' => $tasks,
         ));
     }
+
+    /**
+     * @Route("/task/currentday/", name="list_task_currentday")
+     */
+    public function listByDayAction(Request $request)
+    {
+        $tasks = $this
+            ->getDoctrine()
+            ->getRepository('TodoBundle:Task')
+            ->getTasksOfTheDay();
+
+        return $this->render('TodoBundle:Task:list.html.twig', array(
+            'tasks' => $tasks,
+        ));
+    }
+
+    /**
+     * @Route("/task/currentweek/", name="list_task_currentweek")
+     */
+    public function listByWeekAction(Request $request)
+    {
+        $tasks = $this
+            ->getDoctrine()
+            ->getRepository('TodoBundle:Task')
+            ->getTasksOfTheWeek();
+
+        return $this->render('TodoBundle:Task:list.html.twig', array(
+            'tasks' => $tasks,
+        ));
+    }
+
+    /**
+     * @Route("/task/currentmonth/", name="list_task_currentmonth")
+     */
+    public function listByMonthAction(Request $request)
+    {
+        $tasks = $this
+            ->getDoctrine()
+            ->getRepository('TodoBundle:Task')
+            ->getTasksOfTheMonth();
+
+        return $this->render('TodoBundle:Task:list.html.twig', array(
+            'tasks' => $tasks,
+        ));
+    }
 }

@@ -1,6 +1,23 @@
 hello_world: "Coucou tout le monde!"
 homepage.welcome_message: "Bienvenue sur mon appli todolist"
 
+homepage.filters.title: "Filtres"
+homepage.filters.daytasks: "Taches du jour"
+homepage.filters.weektasks: "Taches de la semaine"
+homepage.filters.monthtasks: "Taches du mois"
+
+homepage.tasks.title: "Taches"
+homepage.tasks.create: "Créer une tache"
+homepage.tasks.list: "Lister les taches"
+
+homepage.categories.title: "Catégories"
+homepage.categories.create: "Créer une catégorie"
+homepage.categories.list: "Lister les catégories"
+
+homepage.tags.title: "Tags"
+homepage.tags.create: "Créer un tag"
+homepage.tags.list: "Lister les tags"
+
 task.form.label: "Libellé"
 task.form.description: "Description"
 task.form.duedate: "Date d'expiration"

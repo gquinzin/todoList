@@ -1,6 +1,23 @@
 hello_world: "Hello World!"
 homepage.welcome_message: "Welcome to my todolist app"
 
+homepage.filters.title: "Filters"
+homepage.filters.daytasks: "Tasks of the day"
+homepage.filters.weektasks: "Tasks of the week"
+homepage.filters.monthtasks: "Tasks of the month"
+
+homepage.tasks.title: "Tasks"
+homepage.tasks.create: "Create task"
+homepage.tasks.list: "List tasks"
+
+homepage.categories.title: "Categories"
+homepage.categories.create: "Create a category"
+homepage.categories.list: "List categories"
+
+homepage.tags.title: "Tags"
+homepage.tags.create: "Create tag"
+homepage.tags.list: "List tags"
+
 task.form.label: "Label"
 task.form.description: "Description"
 task.form.duedate: "Due date"
@@ -11,14 +28,14 @@ task.form.status: "Status"
 task.form.category: "Category"
 task.form.tag: "Tag"
 task.form.save: "Save"
-task.empty_list: "No tasks in database"
+task.empty_list: "No tasks"
 
 category.form.name: "Name"
 category.form.description: "Description"
 category.form.color: "Color"
 category.form.save: "Save"
-category.empty_list: "No categories in database"
+category.empty_list: "No categories"
 
 tag.form.title: "Title"
 tag.form.save: "Save"
-tag.empty_list: "No tags in database"
+tag.empty_list: "No tags"
